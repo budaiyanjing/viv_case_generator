@@ -1,0 +1,59 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  1.7.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      cellSetDict;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+//	name cyl1Top;
+//	name cyl1;
+//	name cyl1Bot;
+
+//	name cyl2Top;
+//	name cyl2;
+//	name cyl2Bot;
+
+//	name cyl3Top;
+//	name cyl3;
+//	name cyl3Bot;
+
+//	name cyl4Top;
+//	name cyl4;
+//	name cyl4Bot;
+
+action new;
+
+topoSetSources
+(
+    boxToCell
+    {
+//       box   (XL YCT -100) (XR 100 100);  //cyl1Top
+//       box   (XL YCB -100) (XR YCT 100);  //cyl1
+//       box   (XL -100 -100) (XR YCB 100);  //cyl1Bot
+
+//       box   (XL YCT -100) (XR 100 100);  //cyl2Top
+//       box   (XL YCB -100) (XR YCT 100);  //cyl2
+//       box   (XL -100 -100) (XR YCB 100);  //cyl2Bot
+
+//       box   (XL YCT -100) (XR 100 100);  //cyl3Top
+//       box   (XL YCB -100) (XR YCT 100);  //cyl3
+//       box   (XL -100 -100) (XR YCB 100);  //cyl3Bot
+
+//       box   (XL YCT -100) (XR 100 100);  //cyl4Top
+//       box   (XL YCB -100) (XR YCT 100);  //cyl4
+//       box   (XL -100 -100) (XR YCB 100);  //cyl4Bot
+
+    }   
+);
+
+// ************************ vim: set sw=4 sts=4 et: ************************ //

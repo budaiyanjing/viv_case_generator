@@ -1,0 +1,77 @@
+faceSet ggi1inZone new patchToFace ggi1in	//cyl1
+faceSet ggi1outZone new patchToFace ggi1out	//cyl1
+
+faceSet ggi2inZone new patchToFace ggi2in	//cyl1
+faceSet ggi2outZone new patchToFace ggi2out	//cyl1
+
+cellSet cyl1Top new cellToCell cyl1Top all	//cyl1
+cellSet cyl1Bot new cellToCell cyl1Bot all	//cyl1
+cellSet cyl1 new cellToCell cyl1 all	//cyl1
+
+faceSet topLayerCyl1 new cellToFace cyl1Top all	//cyl1
+faceSet topLayerCyl1 subset cellToFace cyl1 all	//cyl1
+cellSet topLayerCyl1MasterCells new cellToCell cyl1Top all	//cyl1
+
+faceSet botLayerCyl1 new cellToFace cyl1Bot all	//cyl1
+faceSet botLayerCyl1 subset cellToFace cyl1 all	//cyl1
+cellSet botLayerCyl1MasterCells new cellToCell cyl1Bot all	//cyl1
+
+
+faceSet ggi3inZone new patchToFace ggi3in	//cyl2
+faceSet ggi3outZone new patchToFace ggi3out	//cyl2
+
+faceSet ggi4inZone new patchToFace ggi4in	//cyl2
+faceSet ggi4outZone new patchToFace ggi4out	//cyl2
+
+cellSet cyl2Top new cellToCell cyl2Top all	//cyl2
+cellSet cyl2Bot new cellToCell cyl2Bot all	//cyl2
+cellSet cyl2 new cellToCell cyl2 all	//cyl2
+
+faceSet topLayerCyl2 new cellToFace cyl2Top all	//cyl2
+faceSet topLayerCyl2 subset cellToFace cyl2 all	//cyl2
+cellSet topLayerCyl2MasterCells new cellToCell cyl2Top all	//cyl2
+
+faceSet botLayerCyl2 new cellToFace cyl2Bot all	//cyl2
+faceSet botLayerCyl2 subset cellToFace cyl2 all	//cyl2
+cellSet botLayerCyl2MasterCells new cellToCell cyl2Bot all	//cyl2
+
+
+faceSet ggi5inZone new patchToFace ggi5in	//cyl3
+faceSet ggi5outZone new patchToFace ggi5out	//cyl3
+
+faceSet ggi6inZone new patchToFace ggi6in	//cyl3
+faceSet ggi6outZone new patchToFace ggi6out	//cyl3
+
+cellSet cyl3Top new cellToCell cyl3Top all	//cyl3
+cellSet cyl3Bot new cellToCell cyl3Bot all	//cyl3
+cellSet cyl3 new cellToCell cyl3 all	//cyl3
+
+faceSet topLayerCyl3 new cellToFace cyl3Top all	//cyl3
+faceSet topLayerCyl3 subset cellToFace cyl3 all	//cyl3
+cellSet topLayerCyl3MasterCells new cellToCell cyl3Top all	//cyl3
+
+faceSet botLayerCyl3 new cellToFace cyl3Bot all	//cyl3
+faceSet botLayerCyl3 subset cellToFace cyl3 all	//cyl3
+cellSet botLayerCyl3MasterCells new cellToCell cyl3Bot all	//cyl3
+
+
+faceSet ggi7inZone new patchToFace ggi7in	//cyl4
+faceSet ggi7outZone new patchToFace ggi7out	//cyl4
+
+faceSet ggi8inZone new patchToFace ggi8in	//cyl4
+faceSet ggi8outZone new patchToFace ggi8out	//cyl4
+
+cellSet cyl4Top new cellToCell cyl4Top all	//cyl4
+cellSet cyl4Bot new cellToCell cyl4Bot all	//cyl4
+cellSet cyl4 new cellToCell cyl4 all	//cyl4
+
+faceSet topLayerCyl4 new cellToFace cyl4Top all	//cyl4
+faceSet topLayerCyl4 subset cellToFace cyl4 all	//cyl4
+cellSet topLayerCyl4MasterCells new cellToCell cyl4Top all	//cyl4
+
+faceSet botLayerCyl4 new cellToFace cyl4Bot all	//cyl4
+faceSet botLayerCyl4 subset cellToFace cyl4 all	//cyl4
+cellSet botLayerCyl4MasterCells new cellToCell cyl4Bot all	//cyl4
+
+
+quit

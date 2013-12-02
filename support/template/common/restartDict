@@ -1,0 +1,4 @@
+stop_now    1  # set this to non-zero in order to stop the script
+to_delete   0 # number of time folders to delete
+maxCo   0.25   # new courant number for restarted case
+reset_count 0   # defaultly, the script will stop after 10 attempts, change this if you want to reset internal counter

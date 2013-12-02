@@ -1,0 +1,124 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM Extend Project: Open Source CFD        |
+|  \\    /   O peration     | Version:  1.6-ext                               |
+|   \\  /    A nd           | Web:      www.extend-project.de                 |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      dynamicMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// dynamicFvMesh      staticFvMesh;
+ dynamicFvMesh      mySingleTopoBodyFvMesh;
+
+mySingleTopoBodyFvMeshCoeffs
+{
+    bodies
+    (
+        cylinder1	//cyl1_begin
+        {
+            movingCells     cyl1;
+            layerFaces
+            (
+                topLayerCyl1
+                botLayerCyl1
+            );
+
+            minThickness     0.00155; //cyl1
+            maxThickness     0.0064; //cyl1
+
+			movingCylinder       cylinder1;
+			mass  10.75; //cyl1
+			C     3.2; //cyl1
+			k     1600; //cyl1
+			rhoInf   999.1026;
+			alpha    1.0;
+			initDisp  0;
+			oldt -1;
+
+            invertMotionMask false;
+        }	//cyl1_end
+
+        cylinder2	//cyl2_begin
+        {
+            movingCells     cyl2;
+            layerFaces
+            (
+                topLayerCyl2
+                botLayerCyl2
+            );
+
+            minThickness     0.00155; //cyl2
+            maxThickness     0.0064; //cyl2
+
+			movingCylinder       cylinder2;
+			mass  9.59; //cyl2
+			C     3.382; //cyl2
+			k     757.41; //cyl2
+			rhoInf   999.1026;
+			alpha    1.0;
+			initDisp  0;
+			oldt -1;
+
+            invertMotionMask false;
+        }	//cyl2_end
+
+        cylinder3	//cyl3_begin
+        {
+            movingCells     cyl3;
+            layerFaces
+            (
+                topLayerCyl3
+                botLayerCyl3
+            );
+
+            minThickness     0.00155; //cyl3
+            maxThickness     0.0064; //cyl3
+
+			movingCylinder       cylinder3;
+			mass  9.51; //cyl3
+			C     2.882; //cyl3
+			k     737.24; //cyl3
+			rhoInf   999.1026;
+			alpha    1.0;
+			initDisp  0;
+			oldt -1;
+
+            invertMotionMask false;
+        }	//cyl3_end
+
+        cylinder4	//cyl4_begin
+        {
+            movingCells     cyl4;
+            layerFaces
+            (
+                topLayerCyl4
+                botLayerCyl4
+            );
+
+            minThickness     0.00155; //cyl4
+            maxThickness     0.0064; //cyl4
+
+			movingCylinder       cylinder4;
+			mass  9.58; //cyl4
+			C     2.834; //cyl4
+			k     747.39; //cyl4
+			rhoInf   999.1026;
+			alpha    1.0;
+			initDisp  0;
+			oldt -1;
+
+            invertMotionMask false;
+        }	//cyl4_end
+
+    );
+}
+
+
+// ************************************************************************* //

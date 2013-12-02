@@ -1,0 +1,53 @@
+﻿#----This is a file contains all relevant parameters, use different files to save your settings!
+
+#----Case Paramenters
+default_number_of_cylinders=2 # default number of cylinders, taking effect when not specified in another argument
+owner="zhiyao" # who runs the simulation
+name_template="cyl_%owner_%setup_Re%re" # how the filenames appear in the result folder. %setup is the name of this file
+
+#----set special prototype folder name
+special_prototype_folder="./support/template/zhiyao" # use this to save your unique files
+
+#----set case parameters
+maxCo=0.25
+re=20,30,40,50,60,70,80,90 # Reynolds Number (k)
+nu=0.0000011555
+d=0.0889 # the real diameter of the 1st shape, which should be 1 when drawing the mesh
+minThickness=0.00236
+maxThickness=0.004
+
+#----physical parameters table
+shapes        1       2       3       4
+   m        10.75   9.59    9.51    9.58
+   c        3.200   3.382   2.882   2.834
+   k        1600    757.41  737.24  747.39
+
+#----set domain constrain
+lim_top=4.5
+lim_bottom=-4.5
+lgth_upstream=7
+lgth_downstream=20
+lim_front=1
+lim_back=0
+
+#----select shapes by choosing mesh folder name 
+shape1="old_channel/zhiyao/cyl_PTC20"
+shape2="old_channel/zhiyao/cyl_PTC20"
+shape3="old_channel/zhiyao/cyl_PTC20"
+shape4="old_channel/zhiyao/cyl_PTC20"
+blockWidth1=2 # the mesh block width of each selected shape, because the script doesn't know it
+blockWidth2=2
+blockWidth3=2
+blockWidth4=2
+position_of_shape1='(0,0,0)' # cyliner1 should be generally put right at the original point
+offset_shape1_2='(2.5,0,0)' # offset of cylinders (H_offest, V_offest, 0)
+offset_shape2_3='(2.5,0,0)'
+offset_shape3_4='(2.5,0,0)'
+
+#----set grid factors
+min_grid=0.045	# grid cell numbers are determined based on min grid size and expansion ratio
+ER_dom_x_upstream=0.2	# grid expansion_ratio=d_end/d_start, x-dir positive
+ER_dom_x_mid=1
+ER_dom_x_downstream=5
+ER_dom_y=1.5 	# grid expansion_ratio=d_max/d_min
+

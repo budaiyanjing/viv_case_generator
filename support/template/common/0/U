@@ -1,0 +1,159 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.1.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volVectorField;
+    location    "0";
+    object      U;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 1 -1 0 0 0 0];
+
+internalField   uniform (0.38993208 0 0);	//U
+
+boundaryField
+{
+
+    inlet
+    {
+	type 		fixedValue;
+	value		uniform (0.389932508 0 0);	//U
+    }
+
+    outlet
+    {
+        type 		zeroGradient;
+    }
+
+    top
+    {
+	type 		fixedValue;
+	value		uniform (0.389932508 0 0);	//U
+    }
+
+    bottom
+    {
+	type 		fixedValue;
+	value		uniform (0 0 0);
+    }
+
+    frontAndBack
+    {
+        type 		empty;
+    }
+
+
+    cylinder1	//cyl1_begin
+    {
+        type 		movingWallVelocity;
+		value		uniform (0 0 0);
+    }	//cyl1_end
+
+    ggi1in	//cyl1_begin
+    {
+        type 		ggi;
+    }	//cyl1_end
+
+    ggi1out	//cyl1_begin
+    {
+        type 		ggi;
+    }	//cyl1_end
+
+    ggi2in	//cyl1_begin
+    {
+        type 		ggi;
+    }	//cyl1_end
+
+    ggi2out	//cyl1_begin
+    {
+	type 		ggi;
+    }	//cyl1_end
+
+    cylinder2	//cyl2_begin
+    {
+        type 		movingWallVelocity;
+		value		uniform (0 0 0);
+    }	//cyl2_end
+
+    ggi3in	//cyl2_begin
+    {
+        type 		ggi;
+    }	//cyl2_end
+
+    ggi3out	//cyl2_begin
+    {
+        type 		ggi;
+    }	//cyl2_end
+
+    ggi4in	//cyl2_begin
+    {
+        type 		ggi;
+    }	//cyl2_end
+
+    ggi4out	//cyl2_begin
+    {
+	type 		ggi;
+    }	//cyl2_end
+
+    cylinder3	//cyl3_begin
+    {
+        type 		movingWallVelocity;
+		value		uniform (0 0 0);
+    }	//cyl3_end
+
+    ggi5in	//cyl3_begin
+    {
+        type 		ggi;
+    }	//cyl3_end
+
+    ggi5out	//cyl3_begin
+    {
+        type 		ggi;
+    }	//cyl3_end
+
+    ggi6in	//cyl3_begin
+    {
+        type 		ggi;
+    }	//cyl3_end
+
+    ggi6out	//cyl3_begin
+    {
+	type 		ggi;
+    }	//cyl3_end
+
+    cylinder4	//cyl4_begin
+    {
+        type 		movingWallVelocity;
+		value		uniform (0 0 0);
+    }	//cyl4_end
+
+    ggi7in	//cyl4_begin
+    {
+        type 		ggi;
+    }	//cyl4_end
+
+    ggi7out	//cyl4_begin
+    {
+        type 		ggi;
+    }	//cyl4_end
+
+    ggi8in	//cyl4_begin
+    {
+        type 		ggi;
+    }	//cyl4_end
+
+    ggi8out	//cyl4_begin
+    {
+	type 		ggi;
+    }	//cyl4_end
+
+}
+// ************************************************************************* //

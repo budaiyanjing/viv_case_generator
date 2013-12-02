@@ -1,0 +1,29 @@
+mergeMeshes MASTERCASE ADDCASE		//the combined mesh will be generated in MASTERCASE/0.05/ploymesh, copy them to constant/ploymesh
+
+copy MASTERCASE/0.05/ploymesh/* to constant/ploymesh
+
+checkMesh		//generate "cellToRegion" file
+
+transformPoints -scale "(0.0889 0.0889 1)"		
+	//change dimensions to meet experiment.
+
+add the following lines to constant/polyMesh/boundary file
+	shadowPatch	ggi1stOut;
+	zone		ggi1stInZone;
+	bridgeOverlap	false;
+	
+cellSet		//run 3 times after the modification of system/cellSetDict
+
+setSet -batch setBatch
+
+setsToZones
+
+setFields
+
+myTurbDyMFoam
+
+³ö´í£ºmyTurbDyMFoam: symbol lookup error: myTurbDyMFoam: undefined symbol: _ZN4Foam10SLListBase12endConstIterE
+
+Ã»ÓÐmySingleTopoBodyFvMesh
+
+

@@ -1,0 +1,36 @@
+// The FOAM Project // File: environmentalProperties
+/*
+-------------------------------------------------------------------------------
+ =========         | dictionary
+ \\      /         | 
+  \\    /          | Name:   environmentalProperties
+   \\  /           | Family: FoamX configuration file
+    \\/            | 
+    F ield         | FOAM version: 2.3
+    O peration     | Product of Nabla Ltd.
+    A and          | 
+    M anipulation  | Email: Enquiries@Nabla.co.uk
+-------------------------------------------------------------------------------
+*/
+// FoamX Case Dictionary.
+
+FoamFile
+{
+    version         2.0;
+    format          ascii;
+
+    root            "/home/storm/chris/foam/chris2.3/run/tutorials/interFoam";
+    case            "damBreak";
+    instance        "constant";
+    local           "";
+
+    class           dictionary;
+    object          environmentalProperties;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+g               g [0 1 -2 0 0 0 0] (0 -9.81 0);
+
+
+// ************************************************************************* //
